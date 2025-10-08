@@ -613,6 +613,28 @@ body {
     margin: 0 auto;
 }
 
+/* Vision Section に追加 */
+/* -------------------------------------- */
+
+.vision-goals-title {
+    font-size: 1.5rem; /* 大きさ調整 (pillar-title: 1.3rem, vision-quote: 2.5rem) */
+    font-weight: 600; 
+    color: var(--accent-color); /* 色をアクセントカラーに */
+    text-align: center; /* 中央揃え */
+    margin-bottom: 1.5rem; /* 下に余白 */
+    margin-top: 1rem; /* 上に余白（調整用） */
+    font-family: 'Montserrat', sans-serif; /* Montserratフォントを使用 */
+    letter-spacing: 1px;
+}
+
+/* 768px以下のモバイル表示時の文字サイズ調整（既存のメディアクエリに合わせる） */
+@media (max-width: 768px) {
+    .vision-goals-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+}
+        
 .vision-statement {
     text-align: center;
     margin-bottom: 3rem;
