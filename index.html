@@ -600,6 +600,33 @@ body {
     color: #ffffff;
 }
 
+/* 新しいリスト要素のスタイルを定義 */
+.pillar-list {
+    list-style: none; /* 行頭の黒丸を非表示にする */
+    padding-left: 0; /* ulタグにデフォルトで付く左側の余白を削除 */
+    margin: 0; /* ulタグにデフォルトで付く上下の余白も削除 */
+}
+
+/* 箇条書き風にするために、リストアイテム（li）の前に文字を挿入 */
+.pillar-list li {
+    position: relative;
+    padding-left: 1.2rem; /* 挿入した文字のための左余白 */
+    margin-bottom: 0.7rem; /* リストアイテム間の縦のスペース */
+    line-height: 1.7; /* 行の高さを調整して読みやすく */
+    color: rgba(255, 255, 255, 0.9); /* 元のpタグの文字色に合わせる */
+    font-size: 1.05rem; /* 見た目を調整 */
+}
+
+/* 擬似要素を使って行頭に「・」を配置 */
+.pillar-list li::before {
+    content: '・'; /* 「・」を挿入 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-color); /* アクセントカラー（金色）にする */
+    font-weight: bold;
+}
+        
 .vision-section .section-title {
     color: #ffffff;
 }
@@ -1181,9 +1208,11 @@ body {
                 <div class="vision-pillars">
                     <div class="pillar">
                         <div class="pillar-number">1年</div>
-                        <p class="pillar-text">コーディングの構造を理解</p>
-                        <p class="pillar-text">プロジェクトのフルサイクル経験（企画〜実装〜改善まで）</p>
-                        <p class="pillar-text">データ分析の基礎を習得（Google Analytics等）</p>
+                        <ul class="pillar-list">
+                        <li>コーディングの構造を理解</li>
+                        <li>プロジェクトのフルサイクル経験（企画〜実装〜改善まで）</li>
+                        <li>データ分析の基礎を習得（Google Analytics等）</li>
+                       </ul>
                     </div>
                     <div class="pillar">
                         <div class="pillar-number">3年</div>
